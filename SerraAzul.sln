@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F6E56085-EE5B-491E-B862-2397578B758A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerraAzul.Domain", "src\SerraAzul.Domain\SerraAzul.Domain.csproj", "{E0A88A2E-2AB7-453D-AECD-34C7E5BEF023}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerraAzul.Infra.Data", "src\SerraAzul.Infra.Data\SerraAzul.Infra.Data.csproj", "{EB7C026D-6436-4063-9E87-9DC300CC5F8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerraAzul.Application", "src\SerraAzul.Application\SerraAzul.Application.csproj", "{77AF7ECC-DCA8-4E7B-85CC-D6D68A2F3ACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerraAzul.API", "src\SerraAzul.API\SerraAzul.API.csproj", "{DF2F21F3-FB8E-4C50-B7C6-9D3F1B2F6C92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerraAzul.Core", "src\SerraAzul.Core\SerraAzul.Core.csproj", "{98B0B88E-15D4-4115-8588-E23649ACBCAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E0A88A2E-2AB7-453D-AECD-34C7E5BEF023} = {F6E56085-EE5B-491E-B862-2397578B758A}
+		{EB7C026D-6436-4063-9E87-9DC300CC5F8F} = {F6E56085-EE5B-491E-B862-2397578B758A}
+		{77AF7ECC-DCA8-4E7B-85CC-D6D68A2F3ACA} = {F6E56085-EE5B-491E-B862-2397578B758A}
+		{DF2F21F3-FB8E-4C50-B7C6-9D3F1B2F6C92} = {F6E56085-EE5B-491E-B862-2397578B758A}
+		{98B0B88E-15D4-4115-8588-E23649ACBCAC} = {F6E56085-EE5B-491E-B862-2397578B758A}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0A88A2E-2AB7-453D-AECD-34C7E5BEF023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0A88A2E-2AB7-453D-AECD-34C7E5BEF023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0A88A2E-2AB7-453D-AECD-34C7E5BEF023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0A88A2E-2AB7-453D-AECD-34C7E5BEF023}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB7C026D-6436-4063-9E87-9DC300CC5F8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB7C026D-6436-4063-9E87-9DC300CC5F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB7C026D-6436-4063-9E87-9DC300CC5F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB7C026D-6436-4063-9E87-9DC300CC5F8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77AF7ECC-DCA8-4E7B-85CC-D6D68A2F3ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77AF7ECC-DCA8-4E7B-85CC-D6D68A2F3ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77AF7ECC-DCA8-4E7B-85CC-D6D68A2F3ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77AF7ECC-DCA8-4E7B-85CC-D6D68A2F3ACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF2F21F3-FB8E-4C50-B7C6-9D3F1B2F6C92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF2F21F3-FB8E-4C50-B7C6-9D3F1B2F6C92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF2F21F3-FB8E-4C50-B7C6-9D3F1B2F6C92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF2F21F3-FB8E-4C50-B7C6-9D3F1B2F6C92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98B0B88E-15D4-4115-8588-E23649ACBCAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98B0B88E-15D4-4115-8588-E23649ACBCAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98B0B88E-15D4-4115-8588-E23649ACBCAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98B0B88E-15D4-4115-8588-E23649ACBCAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
