@@ -1,5 +1,4 @@
-﻿using FluentValidation;
-using FluentValidation.Results;
+﻿using FluentValidation.Results;
 using SerraAzul.Domain.Contracts.Interfaces;
 using SerraAzul.Domain.Validators;
 
@@ -12,6 +11,8 @@ public class Usuario : Entity, IAggragateRoot, ISoftDelete
     public string Cpf { get; set; } = null!;
     public string Email { get; set; } = null!;
     public string Senha { get; set; } = null!;
+
+    public Pagamento Pagamento { get; set; } = null!;
 
     public override bool Validar(out ValidationResult validationResult)
     {

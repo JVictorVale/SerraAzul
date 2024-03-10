@@ -6,6 +6,6 @@ public static class StringExtensions
     {
         return string.IsNullOrWhiteSpace(value)
             ? null
-            : new string(value.Where(char.IsDigit).ToArray());
+            : string.Join("", System.Text.RegularExpressions.Regex.Split(value, @"[^\d]"));
     }
 }

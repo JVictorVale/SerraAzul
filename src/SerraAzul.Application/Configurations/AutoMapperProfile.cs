@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using SerraAzul.Application.DTOs.V1.Auth;
-using SerraAzul.Application.DTOs.V1.User;
+using SerraAzul.Application.DTOs.V1.Pagamento;
+using SerraAzul.Application.DTOs.V1.Usuario;
 using SerraAzul.Core.Extensions;
 using SerraAzul.Domain.Entities;
 
@@ -10,13 +10,22 @@ public class AutoMapperProfile : Profile
 {
     public AutoMapperProfile()
     {
-        CreateMap<UsuarioDto, Usuario>().ReverseMap()
-            .ForMember(dest => dest.Cpf, opt => opt.MapFrom(src => src.Cpf.SomenteNumeros()));
-        CreateMap<LoginDto, Usuario>().ReverseMap();
-        CreateMap<AdicionarUsuarioDto, Usuario>().ReverseMap()
-            .ForMember(dest => dest.Cpf, opt => opt.MapFrom(src => src.Cpf.SomenteNumeros()));
-        CreateMap<AtualizarUsuarioDto, Usuario>().ReverseMap()
-            .ForMember(dest => dest.Cpf, opt => opt.MapFrom(src => src.Cpf.SomenteNumeros()));
+        #region Usuario
         
+        CreateMap<Usuario, UsuarioDto>().ReverseMap()
+            .AfterMap((_, dest) => dest.Cpf = dest.Cpf.SomenteNumeros()!);
+        CreateMap<Usuario, AdicionarUsuarioDto>().ReverseMap()
+            .AfterMap((_, dest) => dest.Cpf = dest.Cpf.SomenteNumeros()!);
+        CreateMap<Usuario, AtualizarUsuarioDto>().ReverseMap()
+            .AfterMap((_, dest) => dest.Cpf = dest.Cpf.SomenteNumeros()!);
+        #endregion
+
+        #region Pagamento
+
+        CreateMap<Pagamento, PagamentoDto>().ReverseMap();
+        CreateMap<Pagamento, AdicionarPagamentoDto>().ReverseMap();
+        CreateMap<Pagamento, AtualizarPagamentoDto>().ReverseMap();
+
+        #endregion
     }
 }

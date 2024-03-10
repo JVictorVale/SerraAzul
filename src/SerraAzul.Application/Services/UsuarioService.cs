@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using SerraAzul.Application.Contracts;
-using SerraAzul.Application.DTOs.V1.User;
+using SerraAzul.Application.DTOs.V1.Usuario;
 using SerraAzul.Application.Notifications;
 using SerraAzul.Domain.Contracts.Repositories;
 using SerraAzul.Domain.Entities;
@@ -70,7 +70,7 @@ public class UsuarioService : BaseService, IUsuarioService
         return null;
     }
 
-    public async Task<UsuarioDto> ObterPorId(int id)
+    public async Task<UsuarioDto?> ObterPorId(int id)
     {
         var usuario = await _usuarioRepository.ObterPorId(id);
         if (usuario != null)
@@ -80,7 +80,7 @@ public class UsuarioService : BaseService, IUsuarioService
         return null;
     }
 
-    public async Task<UsuarioDto> ObterPorEmail(string email)
+    public async Task<UsuarioDto?> ObterPorEmail(string email)
     {
         var administrador = await _usuarioRepository.ObterPorEmail(email);
         if (administrador != null)

@@ -1,11 +1,12 @@
-﻿namespace SerraAzul.Application.DTOs.V1.User;
+﻿namespace SerraAzul.Application.DTOs.V1.Usuario;
 
-public class AdicionarUsuarioDto
+public class UsuarioDto
 {
+    public int Id { get; set; }
     public string NomeCompleto { get; set; } = null!;
     public DateTime DataDeNascimento { get; set; }
     public string Cpf { get; set; } = null!;
     public string Email { get; set; } = null!;
-    public string Senha { get; set; } = null!;
-    public string ConfirmarSenha { get; set; } = null!;
+    public DateTime CriadoEm { get; set; }
+    public DateTime AtualizadoEm { get; set; }
 }

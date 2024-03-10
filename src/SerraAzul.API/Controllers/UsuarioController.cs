@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SerraAzul.Application.Contracts;
-using SerraAzul.Application.DTOs.V1.User;
+using SerraAzul.Application.DTOs.V1.Usuario;
 using SerraAzul.Application.Notifications;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -31,6 +31,7 @@ public class UsuarioController : BaseController
     [HttpPut("{id}")]
     [SwaggerOperation(Summary = "Atualizar um Usuário", Tags = new[] { "Usuário - Usuarios" })]
     [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status403Forbidden)]
     public async Task<IActionResult> Atualizar(int id, [FromForm] AtualizarUsuarioDto dto)
@@ -41,6 +42,7 @@ public class UsuarioController : BaseController
     [HttpGet("{id}")]
     [SwaggerOperation(Summary = "Obter um Usuário", Tags = new[] { "Usuário - Usuarios" })]
     [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> ObterPorId(int id)
     {
@@ -50,6 +52,7 @@ public class UsuarioController : BaseController
     [HttpGet]
     [SwaggerOperation(Summary = "Obter todos", Tags = new[] { "Usuário - Usuarios" })]
     [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status403Forbidden)]
     public async Task<IActionResult> ObterTodos()

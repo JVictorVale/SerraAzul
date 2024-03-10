@@ -7,6 +7,7 @@ using SerraAzul.Application.Contracts;
 using SerraAzul.Application.Notifications;
 using SerraAzul.Application.Services;
 using SerraAzul.Core.Settings;
+using SerraAzul.Domain.Contracts.Repositories;
 using SerraAzul.Domain.Entities;
 using SerraAzul.Infra.Data;
 
@@ -39,6 +40,7 @@ public static class DependencyInjection
 
         services
             .AddScoped<IAuthService, AuthService>() 
-            .AddScoped<IUsuarioService, UsuarioService>();
+            .AddScoped<IUsuarioService, UsuarioService>()
+            .AddScoped<IPagamentoService, PagamentoService>();
     }
 }

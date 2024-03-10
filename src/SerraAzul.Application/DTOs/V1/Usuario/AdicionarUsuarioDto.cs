@@ -1,8 +1,7 @@
-﻿namespace SerraAzul.Application.DTOs.V1.User;
+﻿namespace SerraAzul.Application.DTOs.V1.Usuario;
 
-public class AtualizarUsuarioDto
+public class AdicionarUsuarioDto
 {
-    public int Id { get; set; }
     public string NomeCompleto { get; set; } = null!;
     public DateTime DataDeNascimento { get; set; }
     public string Cpf { get; set; } = null!;

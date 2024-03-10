@@ -14,6 +14,7 @@ public class SerraAzulDbContext : DbContext, IUnitOfWork
     }
 
     public DbSet<Usuario> Usuarios { get; set; } = null!;
+    public DbSet<Pagamento> Pagamentos { get; set; } = null!;
     
     public async Task<bool> Commit() => await SaveChangesAsync() > 0;
     
